@@ -1,0 +1,74 @@
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 4rem;
+  text-align: center;
+  display: flex;
+  z-index: 200;
+}
+
+.closed {
+  display: none !important;
+}
+.open {
+  position: absolute;
+  top: 100%;
+  flex-direction: column;
+  width: 100%;
+  padding: 3rem;
+  background-color: var(--color-dark--1);
+  border-radius: 20px;
+}
+
+@media (min-width: 900px) {
+  :global(.menu-icon) {
+    display: none !important;
+  }
+  .nav ul {
+    display: flex !important;
+    position: static;
+    flex-direction: row;
+    background-color: transparent;
+    width: fit-content;
+  }
+}
+.nav a:link,
+.nav a:visited {
+  text-decoration: none;
+  color: var(--color-light--2);
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: 600;
+  transition: 0.5s;
+}
+.nav a:link:hover,
+.nav a:visited:hover {
+  color: var(--color-brand--2);
+  padding-left: 0.3rem;
+}
+
+/* CSS Modules feature */
+.nav a:global(.active) {
+  color: var(--color-brand--2);
+}
+
+a.ctaLink:link,
+a.ctaLink:visited {
+  background-color: var(--color-brand--2);
+  color: var(--color-dark--0);
+  padding: 0.8rem 2rem;
+  border-radius: 7px;
+}
+a.ctaLink:link:hover,
+a.ctaLink:visited:hover {
+  padding: 0.8rem 2rem;
+  color: var(--color-dark--0);
+  letter-spacing: 0.2rem;
+}

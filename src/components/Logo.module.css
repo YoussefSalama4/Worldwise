@@ -1,0 +1,9 @@
+.logo {
+  height: 5.2rem;
+}
+@media (max-width: 700px) {
+  .logoContainer,
+  .logoContainer {
+    align-self: flex-start;
+  }
+}
